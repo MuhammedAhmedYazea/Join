@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/include_html.js"></script>
+    <link rel="stylesheet" href="css/legal_notice.css">
+    <link rel="stylesheet" href="css/add_task.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo_dark.png">
+</head>
+
+
+
+
+<script src="js/contacts.js"></script>
+<script src="js/include_html.js"></script>
+<script src="js/signupandlogin.js"></script>
+
+<script src="js/script.js"></script>
+
+<script src="js/tasks.js"></script>
+
+<script src="js/board.js"></script>
+<script src="js/categories.js"></script>
+
+<title>Add task</title>
+</head>
+
+<body onload="initAddTask()">
+    <!-- MENU TEMPLATE -->
+    <div w3-include-html="assets/templates/menu_template.html"></div>
+    <!-- SIDEBAR TEMPLATE -->
+    <div w3-include-html="assets/templates/sideBar_template.html"></div>
+    <!-- HOLE ADD TASK CONTAINER -->
+    <div class="maincontainer">
+        <!-- HEADER-->
+        <div class="projectheader">
+            <img class="join-logo-mobile-header" src="assets/img/logo_dark.png" alt="logo_dark">
+            <span class="headspan">Kanban Project Management Tool</span>
+            <div class="author"><a href="help.html" target="_self"><img class="questionimg"
+                        src="assets/img/question.png"></a>
+                <img onclick="showMenu()" id="michael" src="assets/img/burjpfp.png">
+            </div>
+        </div>
+        <div class="hidden-Kanban">Kanban Project Management Tool</div>
+        <h1 class="add_task_h1">Add Task</h1>
+        <!-- ADD TASK CONTAINER -->
+        <form onsubmit="addTask(event); return false" class="add_task_container">
+            <!-- TASK TITLE -->
+            <div class="add_task_left">
+                <div class="title fd_column">
+                    <span>Title*</span>
+                    <input class="task_input_field_styling" required type="text" placeholder="Enter a title"
+                        maxlength="25" id="addTaskTitle" required>
+                </div>
+                <!-- TASK DESCRIPTION -->
+                <div class="description fd_column">
+                    <span>Description*</span>
+                    <textarea class="task_input_field_styling" name="description" id="addTaskDescription" cols="30"
+                        rows="5" placeholder="Enter a description" required></textarea>
+                </div>
+                <!-- TASK CATEGORY -->
+                <div class="category fd_column">
+                    <span>Category*</span>
+                    <div class="category-select-down">
+                        <div class="task_input_field_styling dropdown" onclick="openDropdownMenu()" id="dropdown">Select
+                            category</div>
+                        <img class="category-down" onclick="openDropdownMenu()" src="assets/img/category-down.svg"
+                            alt="">
+                    </div>
+                    <ul class="task_input_field_styling dropdown-content" id="addTaskCategorySelect">
+                        <li onclick="handleCategoryChange(this)">New category</li>
+                        <li onclick="clearCategories()">Clear Cateories</li>
+                    </ul>
+
+                </div>
+                <!-- USER SELECTION -->
+                <span id="assignto">Assign to*</span>
+                <div id="selectInnerUser" class="assign fd_column selectInnerUser">
+                </div>
+            </div>
+            <!-- SEPERATOR -->
+            <div class="seperator fd_column"></div>
+            <!-- TASK DATE -->
+            <div class="add_task_right">
+                <div class="date fd_column">
+                    <span>Due date*</span>
+                    <input class="task_input_field_styling" type="date" name="" id="addTaskInputDate" required>
+                </div>
+                <!-- TASK PRIO -->
+                <div class="prio fd_column">
+                    <span>Prio*</span>
+                    <span id="prioalert" class="priowarning d-none" >Choose the priority!!</span>
+                    <div class="prio-btns-container">
+                        <div onclick="getTaskPrio('urgent')" id="prioUrgent" class="prio-btn">Urgent <img
+                                src="assets/img/urgent_prio.png" alt="urgent">
+                        </div>
+                        <div onclick="getTaskPrio('medium')" id="prioMedium" class="prio-btn">Medium <img
+                                src="assets/img/medium_prio.png" alt="medium">
+                        </div>
+                        <div onclick="getTaskPrio('low')" id="prioLow" class="prio-btn">Low <img
+                                src="assets/img/low_prio.png" alt="low"></div>
+                    </div>
+                </div>
+                <!-- SUBTASK -->
+                <div class="subtasks fd_column">
+                    <span>Subtasks</span>
+                    <div class="subtask_container">
+                        <input class="task_input_field_styling" type="text" name="" id="addTaskInputSubtask"
+                            maxlength="20" placeholder="Add new subtask"><img class="subtask_plus"
+                            onclick="addNewSubtask()" src="assets/img/subtask_plus.png" alt="add Subtask">
+                    </div>
+                    <div class="show-subtasks" id="showSubtasks">
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-clear-create">
+                <div onclick="clearTaskBut(event)" class="clear-btn btn">Clear <img src="assets/img/add_task_cancel.png"
+                        alt="check">
+                </div>
+                <button type="submit"  class="create-btn btn">Create Task <img src="assets/img/add_task_check.png"
+                        alt="cancel"></div>
+        </form>
+        <!-- BUTTONS CLEAR AND ADD TASK -->
+       
+       
+        <!-- ADD TASK ANIMATION -->
+        <div class="animation-addedToBoard">
+            <span class="addedTaskToBoard_content">Task added to board <img class="board" src="assets/img/board_img.png"
+                    alt="board"></span>
+        </div>
+    </div>
+</body>
+<script src="js/subtasks.js"></script>
+</html>
+
+
+

@@ -1,0 +1,119 @@
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.side-bar {
+    position: fixed;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 66px;
+    width: 230px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: #2A3647;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.side-bar-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    gap: 15px;
+    width: 230px;
+    height: 230px;
+    margin-top: 60px;
+}
+
+.justify-sidebar-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 230px;
+    height: 46px;
+    justify-content: center;
+}
+
+.justify-sidebar-menu:hover {
+    background-color: #091931;
+}
+
+
+.side-bar-image {
+    width: 25px;
+    height: 25px;
+    
+}
+
+#meineSvg .pfad {
+    fill: #FF0000;  /* Ändert die Füllfarbe */
+    stroke: #0000FF; /* Ändert die Linienfarbe, falls vorhanden */
+}
+
+a {
+    text-decoration: none;
+}
+
+.sidebar-text {
+    color: #CDCDCD;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    width: 100px;
+}
+
+.justify-sidebar-menu-notice {
+    padding-bottom: 100px;
+}
+
+@media (max-width: 800px) {
+    .side-bar {
+        height: 80px;
+        width: 100%;
+        top: auto;
+        flex-direction: row;
+        padding: 0px;
+        z-index: 10;
+    }
+
+    .side-bar-menu-container {
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .justify-sidebar-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 25vw;
+        height: 80px;
+        justify-content: center;
+    }
+
+    .sidebar-text {
+        margin: 0;
+        width: auto;
+    }
+
+    .legal-notice {
+        display: none;
+    }
+
+    .join-logo {
+        display: none;
+    }
+}

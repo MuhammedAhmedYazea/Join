@@ -1,0 +1,440 @@
+body {
+    background-color: #F5F5F5;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.header {
+    height: 80px;
+}
+
+.summary-header {
+    font-size: 61px;
+}
+
+.summary-text {
+    font-size: 27px;
+}
+
+.greeting-text {
+    font-size: 47px;
+    margin: 0px;
+    font-weight: 500;
+}
+
+
+   /* Breite */
+   ::-webkit-scrollbar {
+   
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+   
+
+.date-text {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.deadline-text {
+    font-size: 16px;
+}
+
+.greeting-person {
+    font-size: 64px;
+    margin: 0px;
+    color: #29ABE2;
+}
+
+.content-all-container {
+    margin-left: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-content-justify {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+}
+
+.task-content-top-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 73px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+}
+
+.task-container-top {
+    display: flex;
+    gap: 35px;
+}
+
+.small-task-container {
+    display: flex;
+    width: 170px;
+    height: 170px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.big-task-container {
+    width: 580px;
+    height: 150px;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.deadline-container {
+    text-align: start;
+}
+
+.middle-task-container {
+    width: 272.5px;
+    height: 150px;
+    text-align: center;
+}
+
+.task-container-bottom {
+    display: flex;
+    gap: 35px;
+}
+
+.middle-task-container {
+    width: 272.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-box-style {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: white;
+}
+
+.justify-task-container-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.task-box-style:hover {
+    background-color: #2A3647;
+    color: white;
+}
+
+.task-content-justify{
+    padding-left: 100px;
+}
+
+.task-img {
+    height: 60px;
+    width: 60px;
+}
+.sidebar-color-black {
+    background-color: #091931!important;
+}
+
+.separator-white {
+    width: 0px;
+    height: 100px;
+    border: 2px solid #D1D1D1;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-right: 66px;
+}
+
+.separator-blue-90 {
+    display: none;
+}
+
+.number-style {
+    font-size: 64px;
+    margin-top: 20px;
+}
+
+.text-style {
+    font-size: 21px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+
+.urgent-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.d-none {
+    display: none;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+
+@media (min-width: 800px) {
+    .hidden-Kanban {
+        display: none;
+    }
+}
+
+@media (max-width: 1250px) {
+    .greeting-text {
+        display: none;
+    }
+
+    .greeting-person {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .task-content-top-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        height: 110px;
+    }
+
+    .task-content-justify{
+        justify-content: center;
+    }
+
+    .summary-header {
+        font-size: 61px;
+        margin: 0;
+    }
+
+    .summary-text {
+        font-size: 27px;
+        margin: 0;
+    }
+
+    .separator-blue {
+        display: none;
+    }
+
+    .task-container-top {
+        gap: 13px;
+    }
+
+    .small-task-container {
+        width: 110px;
+        height: 110px;
+    }
+
+    .big-task-container {
+        width: 360px;
+        height: 110px;
+    }
+
+    .task-container-bottom {
+        gap: 12px
+    }
+
+    .task-content-top-container{
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .task-content-justify{
+        padding-left: 40px;
+    }
+
+    .middle-task-container {
+        width: 170.5px;
+        height: 110px;
+    }
+
+    .task-img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .number-style {
+        font-size: 47px;
+        margin-top: 4px;
+    }
+
+    .text-style {
+        font-size: 14px;
+    }
+
+    .date-text {
+        font-size: 16px;
+    }
+
+    .deadline-text {
+        font-size: 14px;
+    }
+
+    .urgent-margin {
+        margin-left: 30px;
+        margin-right: 30px;
+        gap: 18px;
+    }
+
+    .separator-white {
+        height: 68px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .separator-blue-90 {
+        display: block;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .justify-task-container-content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .hidden-Kanban {
+        margin-top: 16px;
+    }
+
+    .content-task-container {
+        margin-top: 24px;
+    }
+
+    .content-all-container {
+        margin-left: 0;
+        margin-bottom: 88px;
+    }
+
+    .task-content-top-container{
+        padding-top: 0px;
+        margin: 0; 
+        padding-bottom: 24px;
+    }
+
+    .summary-header {
+        font-size: 45px;
+        margin: 0;
+    }
+
+    .summary-text {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .separator-blue-90 {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .big-task-container {
+        width: 360px;
+        height: 90px;
+        margin: 16px 0;
+
+    }
+
+    .middle-task-container {
+        width: 170.5px;
+        height: 90px;
+    }
+
+    .small-task-container {
+        width: 110px;
+        height: 110px;
+    }
+
+    .number-style {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+
+    .text-style {
+        font-size: 12px;
+    }
+
+    .task-img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .summary-header {
+        font-size: 40px;
+        margin: 0;
+    }
+
+    .summary-text {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .separator-blue-90 {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .big-task-container {
+        width: 330px;
+        height: 90px;
+        margin: 16px 0;
+    }
+
+    .separator-white {
+        margin: 0 16px;
+    }
+
+    .middle-task-container {
+        width: 160px;
+        height: 90px;
+    }
+
+    .small-task-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .number-style {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    .text-style {
+        font-size: 14px;
+    }
+
+    .task-img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+
+
+  

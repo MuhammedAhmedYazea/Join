@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/include_html.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/legal_notice.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo_dark.png">
+    <title>Help</title>
+</head>
+
+<body onload="includeHTML()">
+    <!-- MENU TEMPLATE -->
+    <div w3-include-html="assets/templates/menu_template.html"></div>
+    <!-- SIDEBAR TEMPLATE -->
+    <div w3-include-html="assets/templates/sideBar_template.html"></div>
+    <!-- HELP HOLE CONTAINER -->
+    <div class="maincontainer">
+        <!-- HEADER TEMPLATE -->
+        <div w3-include-html="assets/templates/header_template.html"></div>
+        <div class="legalnotice">
+            <div class="infotext">
+                <h1>Help</h1>
+                <h2>What is Join?</h2>
+                <span>
+                    Join is a tool for you to organize your tasks and connect with different people.
+                </span>
+                <h2>How to use it</h2>
+                <div class="span1">
+                    <span class="number1"> 1. </span>
+                    Add some people to your network on "Contacts".
+                </div>
+                <div class="span2">
+                    <span class="number2"> 2. </span>
+                    Get to "Board", add a task and which users are responsible for it. Write down what to to, who does
+                    it and how urgent it is.
+                </div>
+                <div class="span3">
+                    <span class="number3"> 3. </span>
+                    When the task is added it will appear at "todo". To move it to the next step simply drag it to
+                    "Awaiting Feedback" for example.
+                    At Summary you will see at the start some infos about your current tasks available.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+}
+
+#michael {
+    width: 50px;
+    display:flex;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  }
+
+  #michael:hover {
+    cursor: pointer;
+  }
+
+  .maincontainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 230px;
+    height: 100vh;
+    background-color: #F6F7F8;
+
+  }
+
+  
+
+  .legalnotice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+   
+  }
+  .sidebar-color-black {
+    background-color: #091931!important;
+}
+
+ 
+
+  .headspan {
+    margin-left: 40px;
+  }
+
+  .questionimg {
+    height: 20px;
+  }
+
+  .infotext {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #F6F7F8;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  hr{
+    color:#29ABE2 !important;
+    background-color:#29ABE2 !important;
+    border: 1px solid  #29ABE2 ;
+  }
+
+
+  #legalnoticeheader {
+    font-size: 60px;
+    border-bottom: 4px solid #29ABE2;
+  }
+
+ 
+.maincontainer:-webkit-scrollbar {
+  width: 12px; 
+  border-radius: 8px;
+}
+
+
+.maincontainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+
+.maincontainer:-webkit-scrollbar-thumb {
+  background: #A8A8A8; 
+  border-radius: 8px;
+}
+
+
+.maincontainer::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.span1 {
+
+  padding-bottom: 20px;
+}
+.span2 {
+
+  padding-bottom: 20px;
+}
+
+
+   /* Breite */
+   ::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+   
+
+.number1 {
+  font-size: 20px;
+  color:#29ABE2;
+}
+.number2 {
+  font-size: 20px;
+  color:#29ABE2;
+}
+.number3 {
+  font-size: 20px;
+  color:#29ABE2;
+}
+  
+  
+  
+
+  @media only screen and (max-width: 800px) {
+  
+    .maincontainer {
+       margin: 0;
+       overflow-x: hidden;
+    }
+    .author {
+        padding-right: 5px;
+    }
+
+    .legalnotice {
+      margin-bottom: 100px;
+    }
+  }

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/legal_notice.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/add_task_popup.css">
+    <link rel="stylesheet" href="css/edit_task_popup.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo_dark.png">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Add Select2 library -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+</head>
+
+
+<script src="js/include_html.js"></script>
+<script src="js/script.js"></script>
+<script src="js/tasks.js"></script>
+<script src="js/subtasks.js"></script>
+<script src="js/signupandlogin.js"></script>
+<script src="js/board.js"></script>
+<script src="js/contacts.js"></script>
+<script src="js/summary.js"></script>
+<script src="js/templates.js"></script>
+<script src="js/categories.js"></script>
+<script src="js/drag_and_drop.js"></script>
+
+<title>Board</title>
+</head>
+
+<body onload="initBoard()">
+    <!-- SIDEBAR TEMPLATE -->
+    <div w3-include-html="assets/templates/sideBar_template.html"></div>
+    <!-- HOLE BOARD CONER -->
+    <div class="maincontainer">
+        <!-- HEADER-->
+        <div w3-include-html="assets/templates/menu_template.html"></div>
+        <div w3-include-html="assets/templates/header_template.html"></div>
+        <div class="hidden-Kanban">Kanban Project Management Tool</div>
+        <!-- BOARD TOP CONTAINER -->
+        <div class="boardtop">
+            <div class="headingboard">
+                <h1>Board</h1>
+                <div class="plus-sign-mobile">
+                    <img onclick="addTaskPopUp()" class="plus-sign" src="assets/img/plus.png" alt="">
+                </div>
+            </div>
+            <!-- BOARD SEARCH  -->
+            <div class="search">
+                <div class="searchbar"><input id="searchTaskInput" oninput="findTask()" class="searchinput"
+                        placeholder="Find Task" type="search"> <img src="assets/img/search.png"></div>
+                <div class="addtask" onclick="addTaskPopUp()"><span>Add task</span><img src="assets/img/plus.png"></div>
+            </div>
+        </div>
+        <!-- OVERLAY SHOW TASK -->
+        <div id="showTask" class="showtask d-none"></div>
+        <!-- TASK TODO -->
+        <div id="taskContainer" class="taskcontainer">
+            <div class="task">
+                <div class="taskheading">
+                    <h3>To do</h3><img class="plusbutton" src="assets/img/plus_button.png" onclick="addTaskPopUp()">
+                </div>
+                <div class="task-status-container" id="toDo" ondragover="allowDrop(event); highlight('toDo')"
+                    ondragleave="removeHighlight('toDo')" ondrop="moveTo('toDo'); removeHighlight()">
+                </div>
+            </div>
+            <!-- TASK IN PROGRESS -->
+            <div class="task">
+                <div class="taskheading">
+                    <h3>In progress</h3><img class="plusbutton" src="assets/img/plus_button.png"
+                        onclick="addTaskInProgress()">
+                </div>
+                <div class="task-status-container" id="inProgress"
+                    ondragover="allowDrop(event); highlight('inProgress')" ondragleave="removeHighlight('inProgress')"
+                    ondrop="moveTo('inProgress'); removeHighlight()">
+                </div>
+            </div>
+            <!-- TASK AWAITING FEEDBACK -->
+            <div class="task">
+                <div class="taskheading">
+                    <h3>Awaiting Feedback</h3><img class="plusbutton" src="assets/img/plus_button.png"
+                        onclick="addTaskAwaitingFb()">
+                </div>
+                <div class="task-status-container" id="awaitingFeedback"
+                    ondragover="allowDrop(event); highlight('awaitingFeedback')"
+                    ondragleave="removeHighlight('awaitingFeedback')"
+                    ondrop=" moveTo('awaitingFeedback'); removeHighlight()">
+                </div>
+            </div>
+            <!-- TASK DONE -->
+            <div class="task">
+                <div class="taskheading">
+                    <h3>Done</h3><img class="plusbutton" src="assets/img/plus_button.png" onclick="addTaskDone()">
+                </div>
+                <div class="task-status-container" id="done" ondragover="allowDrop(event); highlight('done')"
+                    ondragleave="removeHighlight('done')" ondrop="moveTo('done'); removeHighlight()">
+                </div>
+            </div>
+        </div>
+        <!-- POPUP ADD TASK -->
+        <div class="popup_add_task" id="popupAddTask"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.header-mobile {
+  display: flex;
+}
+
+.join-logo-mobile-header {
+  height: 50px;
+}
+
+.author {
+  display: flex;
+  gap: 25px;
+  padding-right: 40px;
+  align-items: center;
+}
+
+.projectheader {
+  background-color: white;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px 0px #0000001a;
+  width: 100%;
+}
+
+.headspan {
+  margin-left: 100px;
+}
+
+.questionimg {
+  height: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 800px) {
+  .join-logo-mobile-header {
+    display: none;
+  }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .headspan {
+    display: none;
+  }
+
+  .join-logo-mobile-header {
+    padding-left: 15px;
+  }
+
+  .author {
+    padding-right: 15px;
+  }
+}

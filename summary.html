@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/summary.css">
+    <link rel="stylesheet" href="css/legal_notice.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo_dark.png">
+    <script src="js/include_html.js"></script>
+    <script src="js/signupandlogin.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/subtasks.js"></script>
+    <script src="js/summary.js"></script>
+
+    <title>Summary</title>
+</head>
+
+<body onload="initSummary()">
+    <!-- HEADER-->
+    <div w3-include-html="assets/templates/menu_template.html"></div>
+    <!-- SIDEBAR TEMPLATE -->
+    <div w3-include-html="assets/templates/sideBar_template.html"></div>
+    <!-- HOLE SUMMARY CONTAINER -->
+    <div class="content-all-container">
+        <!-- HEADER TEMPLATE -->
+        <div w3-include-html="assets/templates/header_template.html"></div>
+        <!-- HEADLINE CONTAINER -->
+        <div class="task-content-top-container">
+            <div class="hidden-Kanban">Kanban Project Management Tool</div>
+            <h2 class="summary-header">Summary</h2>
+            <img class="separator-blue" src="./assets/img/separator_blue.png">
+            <p class="summary-text">Everything in a nutshell!</p>
+            <img class="separator-blue-90" src="./assets/img/seperator_blue_90.png">
+        </div>
+        <!-- CONTENT LEFT -->
+        <div class="task-content-justify">
+            <div class="task-content-left">
+                <div class="content-task-container">
+                    <!-- TOP CONTAINER TASKS-->
+                    <div class="task-container-top">
+                        <div onclick="location.href='board.html'" class="small-task-container task-box-style">
+                            <div>
+                                <div id="tasksInBoardNumber" class="number-style"></div>
+                                <p class="text-style">Tasks <br> in board</p>
+                            </div>
+                        </div>
+                        <div onclick="location.href='board.html'" class="small-task-container task-box-style">
+                            <div>
+                                <div id="tasksInProgressNumber" class="number-style"></div>
+                                <p class="text-style">Tasks <br> in Progress</p>
+                            </div>
+                        </div>
+                        <div onclick="location.href='board.html'" class="small-task-container task-box-style">
+                            <div>
+                                <div id="awaitFeedbackNumber" class="number-style"></div>
+                                <p class="text-style">Awaiting <br> Feedback</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BIG MIDDLE CONTAINER URGENT-->
+                    <div onclick="location.href='board.html'" class="big-task-container task-box-style">
+                        <div>
+                            <img src="./assets/img/urgent_img.png" class="task-img urgent-margin">
+                        </div>
+                        <div>
+                            <div id="urgentNumber" class="number-style"></div>
+                            <p class="text-style">Urgent</p>
+                        </div>
+                        <img src="./assets/img/separator_white.png" class="separator-white">
+                        <div class="deadline-container">
+                            <p id="urgentDate" class="date-text"></p>
+                            <p class="deadline-text">Upcoming Deadline</p>
+                        </div>
+                    </div>
+                    <!-- BOTTOM CONTAINER LEFT TO-DO-->
+                    <div class="task-container-bottom">
+                        <div onclick="location.href='board.html'" class="task-box-style middle-task-container"
+                            id="toDo-container" onmouseover="changeImage('toDo-container')"
+                            onmouseout="resetImage('toDo-container')">
+                            <div class="justify-task-container-content">
+                                <div>
+                                    <img src="./assets/img/todo_white.png" class="task-img white d-none">
+                                    <img src="./assets/img/todo_black.png" class="task-img black">
+                                </div>
+                                <div>
+                                    <div id="toDoNumber" class="number-style"></div>
+                                    <p class="text-style">To-do</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BOTTOM CONTAINER RIGHT DONE-->
+                        <div onclick="location.href='board.html'" class="task-box-style middle-task-container"
+                            id="done-container" onmouseover="changeImage('done-container')"
+                            onmouseout="resetImage('done-container')">
+                            <div class="justify-task-container-content">
+                                <div>
+                                    <img src="./assets/img/done_white.png" class="task-img white d-none">
+                                    <img src="./assets/img/done_black.png" class="task-img black">
+                                </div>
+                                <div>
+                                    <div id="doneNumber" class="number-style"></div>
+                                    <p class="text-style">Done</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CONTENT RIGHT GREETING-->
+            <div class="task-content-right">
+                <p id="greeting" class="greeting-text">Good morning</p>
+                <p id="currentUser" class="greeting-person">Person</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

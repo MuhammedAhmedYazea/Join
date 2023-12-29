@@ -1,0 +1,79 @@
+body {
+    overflow-x: hidden;
+}
+
+.menu-container-d-none {
+    display: none;
+}
+
+.menu-container{
+display: flex;
+align-items: center;
+text-align: center;
+flex-direction: column;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+
+
+
+
+
+.menu-button {
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.menu-link {
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-link:hover {
+    width: 100%;
+    cursor: pointer;
+    background-color: #29ABE2;
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#menu {
+    background-color: #2A3647;
+    z-index: 1000;
+    margin-top: 80px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 180px;
+    transition: all 250ms ease-in-out;
+    filter: drop-shadow(-3px 0px 16px #083a0833);
+    gap: 0;
+    border-radius: 10px 0 10px 10px;
+}
+ 
+.hide-overlay-menu {
+    transform: translateX(300px);
+}
+
+.show-overlay-menu {
+    transform: translateX(0px);
+}
+
+
+@media(min-width: 800px) {
+    #legal_notic_sidebar{
+        display: none;
+    }
+    
+    #helpsidebar {
+        display: none;
+    }
+}
+
+

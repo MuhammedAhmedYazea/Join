@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/signupandlogin.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo_dark.png">
+    <title>Join</title>
+</head>
+
+<body onload="init()">
+    <!-- LOGO ANIMATION-->
+    <div class="startcontainer">
+        <img class="logowhite" src="assets/img/logo_white.png">
+    </div>
+    <img class="joinlogo" src="assets/img/logo_dark.png">
+    <!-- SIGN UP BUTTON -->
+    <div class="signuptop">
+        <span id="signuptop">Not a Join user ?</span>
+        <a class="signupbutton" target="_self" href="signup.html">Sign up</a>
+    </div>
+    <!-- LOGIN CONTAINER -->
+    <div class="maincontainer">
+        <form onsubmit="login(event); return false" class="login">
+            <!-- LOGIN CONTAINER HEADER -->
+            <div class="heading">
+                <span>Log in</span>
+                <div class="blueline"></div>
+            </div>
+            <!-- EMAIL -->
+            <div class="email">
+                <input id="inputmail" type="email" required placeholder="Email">
+                <img class="imgmail" src="assets/img/mail_img.png">
+            </div>
+            <!-- PASSWORD -->
+            <div class="email">
+                <input id="inputpassword" type="password" required placeholder="Password">
+                <img class="imglock" src="assets/img/lock.png">
+            </div>
+            <div id="wrongpassword"></div>
+            <!-- REMEMBER ME + FORGOT PASSWORD -->
+            <div class="rememberme">
+                <input onclick="rememberUser()" type="checkbox" id="checkbox" value="checked">
+                <span id="rememberme">Remember me</span>
+                <span id="forgotpw">
+                    <a href="forgotpassword.html" target="_self">Forgot my password</a>
+                </span>
+            </div>
+            <!-- LOG IN BUTTONS -->
+            <div class="bottombuttons">
+                <button type="submit" class="loginbutton">Log in</button>
+                <a onclick="loginGuest()" class="guestbutton" target="_self">Guest Log in</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

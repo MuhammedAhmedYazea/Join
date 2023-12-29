@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/contacts.js"></script>
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo_dark.png">
+    <title>Contacts</title>
+
+</head>
+
+<body onload="initContacts()">
+    <!-- HEADER-->
+    <div w3-include-html="assets/templates/menu_template.html"></div>
+
+    <div class="maincontainer">
+        <script src="js/include_html.js"></script>
+        <div w3-include-html="assets/templates/header_template.html"></div>
+        <div class="middlecontainer">
+            <div class="listofcontacts" id="contactList"> </div>
+            <div id="contactInfo">
+                <div class="contacts-header-right">
+                    <h1>Contacts</h1>
+                    <div class="blueline"></div>
+                    <h3 class="text-better-with-a-team">Better with a team</h3>
+                    <img class="" id="closebigcontact" onclick="closeBigContact()" src="assets/img/close.png">
+                </div>
+                <div id="showContact" class="showcontact">
+
+                </div>
+
+            </div>
+
+
+            <button onclick="openAddContact()" class="btn-contact"><b>New contact</b> <img src="assets/img/contact+.png"
+                    class="btn-contact-icon"> </button>
+        </div>
+
+        <div class="dialog-add-contact"></div>
+        <!-- ADD CONTACT -->
+        <div class="modal d-none" id="modalOne">
+            <div id="newcontact" class="modal-dialog">
+                <div class="left-side-modal"><img src="assets/img/join_logo.png" class="contacts-join-logo">
+                    <h1 class="modal-headline">Add contact</h1>
+                    <img id="closeaddcontactimg" src="assets/img/cancel_white.png" alt="cancel"
+                        onclick="closeAddContact()" class="close-contact-creation">
+                    <p id="text-better-with-a-team" class="modal-text">Tasks are better with a team!</p>
+                    <div class="blueline-vertical"></div>
+                </div>
+
+                <div class="right-side-modal">
+                    <img class="closeimgpopup3" onclick="closeAddContact()" src="assets/img/close.png">
+                    <div class="img-info">
+                        <img class="img-add-contact" src="assets/img/pfp.png">
+                        <form id="contactForm" class="input-fields" onsubmit="event.preventDefault(); addContact();">
+                            <input id="contactName" type="text" required minlength="3" class="input-field"
+                                placeholder="Name">
+                            <input id="contactMail" type="email" required class="input-field-mail" placeholder="Email">
+                            <input id="contactPhone" type="number" required minlength="10" class="input-field-phone"
+                                placeholder="Phone">
+                            <div class="bottom-buttons">
+                                <button type="button" onclick="closeAddContact()" class="cancel-btn">Cancel</button>
+                                <button type="submit" id="createContactButton" class="create-btn">Create
+                                    contact</button>
+                            </div>
+                            <span id="addedToBoard" class="addedTaskToBoard_content">Contact Added <img class="board"
+                                    src="assets/img/board_img.png" alt="board"></span>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EDIT CONTACT -->
+    <div class="modal d-none" id="modalOneEdit">
+        <div id="newcontact" class="modal-dialog ">
+            <div class="left-side-modal"><img src="assets/img/join_logo.png" class="contacts-join-logo">
+                <h1 class="modal-headline">Edit contact</h1>
+
+                <div class="blueline-vertical"></div>
+            </div>
+
+            <div class="right-side-modal">
+                <div class="img-info">
+                    <div class="imgcontacteditcontainer">
+                        <div id="imgAddContactEdit" class="img-add-contactedit " style="background-color: red;">
+                            <span id="firstLetter">A</span>
+                            <span id="secondLetter">B</span>
+                        </div>
+                    </div>
+                    <div class="input-fields">
+                        <input id="contactNameEdit" class="input-field" placeholder="Name">
+                        <input id="contactMailEdit" class="input-field-mail" placeholder="Email">
+                        <input id="contactPhoneEdit" class="input-field-phone" placeholder="Phone">
+                        <div id="editButtons" class="bottom-buttons">
+                            <!-- <button onclick="closeEditContact()" class="cancel-btn">Delete</button> -->
+                            <!-- <button onclick="saveContact()" class="create-btn">Save</button> -->
+                            <span class="addedTaskToBoard_content">Contact Added <img class="board"
+                                    src="assets/img/board_img.png" alt="board"></span>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+<div w3-include-html="assets/templates/sideBar_template.html"></div>
+
+
+<script src="js/include_html.js"></script>
+<script src="js/signupandlogin.js"></script>
+<script src="js/script.js"></script>
+<script src="js/contacts.js"></script>
+<script src="js/contacts_template.js"></script>
+
+
+</html>
